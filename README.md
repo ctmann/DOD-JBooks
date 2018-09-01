@@ -1,5 +1,12 @@
-# DOD-JBooks
+# Military Service Justification Books
 Each year, the military services submit spending documents to congress that "justify" their budget request. The "books" are collections of tables and reports published in .pdf format. Converting these tables to spreadsheets is extremely difficult.
+
+## How Data Varies
+Jbook data is likely to be formatted differently at each stage of release.
+
+ Year   | Service    | Component
+--------|------------|----------
+FY2000-FY2019 | Army, Navy, Air Force, Defense-Wide | Active, Reserve, National Guard
 
 ## Key Links
 * **DOD Comptroller:Defense Budget Materials (by year):** Hyperlink reliably varies, by year: https://comptroller.defense.gov/Budget-Materials/Budget2019/
