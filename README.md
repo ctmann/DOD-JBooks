@@ -2,11 +2,11 @@
 Each year, the military services submit spending documents to congress that "justify" their budget request. The "books" are collections of tables and reports published in .pdf format. Converting these tables to spreadsheets is extremely difficult.
 
 ## How Data Varies
-Jbook data is likely to be formatted differently at each stage of release.
+Jbook data is likely to be inconsistently formatted among years, services, and by component:
 
- Year   | Service    | Component
+ Variations from Year-to-year   | Variations between Service branch   | Variations between Components
 --------|------------|----------
-FY2000-FY2019 | Army, Navy, Air Force, Defense-Wide | Active, Reserve, National Guard
+Varies from year to year (FY2000-FY2019) | Varies by Service (Army, Navy and Marine Corps, Air Force, Defense-Wide) | Varies by component (Active, Reserve, National Guard)
 
 ## Key Links
 * **DOD Comptroller:Defense Budget Materials (by year):** Hyperlink reliably varies, by year: https://comptroller.defense.gov/Budget-Materials/Budget2019/
