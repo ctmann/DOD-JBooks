@@ -1,1 +1,2 @@
 # DOD-JBooks
+Each year, the military services submit spending documents to congress that "justify" their budget request. The "books" are collections of tables and reports published in .pdf format. Converting these tables to spreadsheets is extremely difficult.
