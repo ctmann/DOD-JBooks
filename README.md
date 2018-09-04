@@ -16,4 +16,3 @@ Varies from year to year (FY2000-FY2019) | Varies by Service (Army, Navy and Mar
 * **Defense Wide Budget Documentation:** Hyperlink reliable, however, contents of page vary considerably: https://comptroller.defense.gov/Budget-Materials/FY2019BudgetJustification/
 
 
-
