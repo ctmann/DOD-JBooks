@@ -7,23 +7,37 @@ library(rvest)
 
 # Navy
 # Example with one year
+library(tidyverse)
+library(rvest)
 
-my.url <- read_html("http://www.secnav.navy.mil/fmc/fmb/Pages/Fiscal-Year-2019.aspx")
+my.url <- read_html("http://www.secnav.navy.mil/fmc/fmb/Pages/Fiscal-Year-2019.aspx") %>% 
+  html_nodes("#sharePointMainContent") 
 
-title <- my.url %>% 
-  html_nodes("#sharePointMainContent") %>% 
+hyperlink.title <- my.url %>% 
   html_nodes("li") %>% 
   html_text()
 
 hyperlink <- my.url %>% 
-  html_nodes("#sharePointMainContent") %>% 
   html_nodes("li") %>% 
   html_nodes("a") %>% 
   html_attr("href")
 
-df <- tibble(title, hyperlink)
+df <- tibble(title, hyperlink.title)
+df
 
 
+View(df)
+
+library(tidyverse)
+library(rvest)
+
+my.url <- read_html("http://www.secnav.navy.mil/fmc/fmb/Pages/Fiscal-Year-2019.aspx") %>% 
+  html_nodes("#sharePointMainContent") 
+
+
+subject.heading <- my.url %>% 
+  html_nodes("h3") %>% 
+  html_text() %>% str_trim()
 
 # Notepad-------------------------
 # my.url %>% 

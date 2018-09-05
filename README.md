@@ -8,6 +8,12 @@ Jbook data is likely to be inconsistently formatted among years, services, and b
 --------|------------|----------
 Varies from year to year (FY2000-FY2019) | Varies by Service (Army, Navy and Marine Corps, Air Force, Defense-Wide) | Varies by component (Active, Reserve, National Guard)
 
+## Description of Problem
+The extremely wide variation, particularly among early docs, means that a collection effort would be most useful by beginning at the most current year and working backwards in time.
+
+* webscape jbook docs: Is it worth downloading them and archiving them locally? Should the DOD comptroller data also be included in this project or a separate one?
+
+
 ## Key Links
 * **DOD Comptroller:Defense Budget Materials (by year):** Hyperlink reliably varies, by year: https://comptroller.defense.gov/Budget-Materials/Budget2019/
 * **US Army Budget Documentation:** site not accessible in Chrome, due to poor security settings. Archived jbooks accessible by using drop-down on main splashpage. Hyperlink does not vary:https://www.asafm.army.mil/offices/bu/content.aspx?what=BudgetMaterials
