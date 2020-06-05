@@ -1,6 +1,6 @@
 
 # Header ------------------------------------------------------------------
-#' Navy and USMC annual budget justification document liniks
+#' Navy and USMC annual budget justification document links
 #' 
 #' Note: I was unable to scrape the headings (h3) into the final dataframe
 #' and so did an extended str_detect...a poor solution.
@@ -12,6 +12,21 @@ library(tidyverse)
 library(rvest)
 library(stringr)
 
+# How to Update this file -------------------------------------------------
+
+#1) Change to CY
+current.year <- 2021
+
+
+# Common Vars and Functions -----------------------------------------------
+
+# span of years to download: note FY2018 is hosed. Don't know why.
+year.span <- as.character(c(2001:2017, 2019:current.year))
+from.to.years <- str_c("FY", as.character(2001), "-", 
+                       "FY", as.character(current.year))
+
+# Main --------------------------------------------------------------------
+
 navy_function <- function(my.site){
   x <- read_html(my.site) %>% 
   html_nodes(".s4-wpcell-plain") %>% 
@@ -22,11 +37,10 @@ navy_function <- function(my.site){
   })
   return(x) }
 
-#Create a df
-# FY2018 is HOSED, so I've eliminated it for now
 
-navy <- tibble(FY = as.character(c(2001:2017, 2019)),
-              hyperlink = str_c("http://www.secnav.navy.mil/fmc/fmb/Pages/Fiscal-Year-", c(2001:2017, 2019), ".aspx"),
+navy <- tibble(
+              FY = year.span,
+              hyperlink = str_c("http://www.secnav.navy.mil/fmc/fmb/Pages/Fiscal-Year-", year.span, ".aspx") ,
               Department = "Navy")
 
 navy <- navy %>%
@@ -62,9 +76,11 @@ navy <- navy %>%
 
 
 # Export ------------------------------------------------------------------
-write_csv(navy, "./Data/Processed/navy_FY2001-FY2019.csv")
-library(feather)
-write_feather(navy, "./Data/Processed/navy_FY2001-FY2019.feather")  
+
+from.to.years
+
+write_csv(navy, str_c("./Data/Processed/navy_", from.to.years, ".csv") )
+
   
   
   
